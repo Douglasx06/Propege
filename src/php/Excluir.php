@@ -6,7 +6,7 @@
     $id = $_POST['inputid'];
 
     //Excluindo dados no banco do SQL
-    $sql = "DELETE FROM aula WHERE id_usuario = " . $id;
+    $sql = "DELETE FROM clientes WHERE id_usuario = " . $id;
 
     //Verificar se não ocorreu nenhum erro na exclusão de dado
     if($conn->query($sql) === TRUE){

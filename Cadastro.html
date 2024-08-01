@@ -16,22 +16,20 @@
 
 </head>
 <body>
-  <form action="inserir.php" method="post">
+  <form action="src/php/inserir.php" method="post">
     <div class="Conteiner-Form">
       <h1>Cadastrar novo usuário</h1>
       <div class="barra-horizontal"></div>
         <div class="Conteiner-label">
           <br><label for="nome">Nome:</label>
-          <input type="text" nome="Nome" id="inputNome" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O NOME">
+          <input type="text" name="Nome" id="Nome" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O NOME">
           <label for="email" class="fonte">Email:</label>
-          <input type="text" name="email" id="inputEmail"required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O EMAIL">
+          <input type="text" name="Email" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O EMAIL">
           <label for="CPF" class="fonte">CPF:</label>
-          <input type="text" name="CPF" id="inputCPF" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O CPF">
+          <input type="text" name="CPF" id="CPF" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O CPF">
           <label for="senha" class="fonte">Senha:</label>
-          <input type="password" name="senha" id="inputSenha" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE A SENHA">
-          <label for="confsenha" class="fonte">Confirma a sua Senha: </label>
-          <input type="password" name="confsenha" id="inputConfSenha" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="CONFIRME A SUA SENHA"><br>
-        </div>
+          <input type="password" name="senha" id="senha" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE A SENHA">
+          </div>
       <button type="submit" name="enviar-cadastro">ENVIAR</button>
       <button type="reset" name="limpar-cadastro">LIMPAR</button>
     </div>

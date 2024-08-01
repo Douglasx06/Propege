@@ -2,24 +2,32 @@
 require "conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST['inputNome'];
-    $pass = $_POST['inputSenha'];
+    $Email = $_POST['inputEmail'];
+    $senha = $_POST['inputSenha'];
 
-    $sql = "SELECT * FROM user WHERE clientes = ?";
+    $sql = "SELECT senha FROM clientes WHERE email = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $user);
+
+    if ($stmt === false) {
+        die("Erro na preparação da consulta: " . $conn->error);
+    }
+
+    $stmt->bind_param("s", $Email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if (password_verify($pass, $row['clientes'])) {
-            echo "Bem Vindo, " . htmlspecialchars($user) . ".";
+        $hashedPassword = $row['senha'];
+
+        if (password_verify($senha, $hashedPassword)) {
+            header("Location: Paginalogin.html");
+            exit();
         } else {
-            echo "senha inválida.";
+            echo "Senha inválida.";
         }
     } else {
-        echo "No user found with that username.";
+        echo "Nenhum usuário encontrado com esse e-mail.";
     }
 
     $stmt->close();

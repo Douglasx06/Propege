@@ -20,15 +20,15 @@
 </head>
 <body>
     <div id="Conteiner-Form">
-        <form action="login.php" method="post">
+        <form action="src/php/login.php" method="post">
             <h1>ENTRAR</h1>
             <div class="barra-horizontal"></div>
             <span></span>
             <div class="Conteiner-label">
-                <label for="inputNome"><br>Nome:</label>
-                <input type="text" id="inputNome" name="nome" required maxlength="25" minlength="3" class="Conteiner-Form">
+                <label for="inputEmail"><br>Email:</label>
+                <input type="text" id="inputEmail" name="inputEmail" required maxlength="25" minlength="3" class="Conteiner-Form">
                 <label for="inputSenha"><br>Senha:</label>
-                <input type="text" id="inputSenha" name="inputSenha" required maxlength="25" minlength="3" class="Conteiner-Form">
+                <input type="password" id="inputSenha" name="inputSenha" required maxlength="25" minlength="3" class="Conteiner-Form">
                 <button type="submit" name="enviar-cadastro">ENVIAR</button>   
             </div>   
         </form>
