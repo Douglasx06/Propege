@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPEGE LOGIN</title>
+
+<!-- FIVICON -->
+    <link rel="icon" href="img/icon.png">
+<!--ESTILO-->
+    <link rel="stylesheet" href="src/css/Stylelogin.css">
+<!--FIVICON-->
+    <link rel="icon" href="src/img/icon.png">
+<!--FONTE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="Conteiner-Form">
+        <form action="login.php" method="post">
+            <h1>ENTRAR</h1>
+            <div class="barra-horizontal"></div>
+            <span></span>
+            <div class="Conteiner-label">
+                <label for="inputNome"><br>Nome:</label>
+                <input type="text" id="inputNome" name="nome" required maxlength="25" minlength="3" class="Conteiner-Form">
+                <label for="inputSenha"><br>Senha:</label>
+                <input type="text" id="inputSenha" name="inputSenha" required maxlength="25" minlength="3" class="Conteiner-Form">
+                <button type="submit" name="enviar-cadastro">ENVIAR</button>   
+            </div>   
+        </form>
+    </div>
+</body>
+</html>

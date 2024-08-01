@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro Propege</title>
+<!-- FIVICON -->
+    <link rel="icon" href="img/icon.png">
+<!--ESTILO-->
+    <link rel="stylesheet" href="src/css/StyleCadastro.css">
+<!--FIVICON-->
+    <link rel="icon" href="src/img/icon.png">
+<!--FONTE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <form action="inserir.php" method="post">
+    <div class="Conteiner-Form">
+      <h1>Cadastrar novo usuário</h1>
+      <div class="barra-horizontal"></div>
+        <div class="Conteiner-label">
+          <br><label for="nome">Nome:</label>
+          <input type="text" nome="Nome" id="inputNome" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O NOME">
+          <label for="email" class="fonte">Email:</label>
+          <input type="text" name="email" id="inputEmail"required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O EMAIL">
+          <label for="CPF" class="fonte">CPF:</label>
+          <input type="text" name="CPF" id="inputCPF" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE O CPF">
+          <label for="senha" class="fonte">Senha:</label>
+          <input type="password" name="senha" id="inputSenha" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="DIGITE A SENHA">
+          <label for="confsenha" class="fonte">Confirma a sua Senha: </label>
+          <input type="password" name="confsenha" id="inputConfSenha" required maxlength="25" minlength="3" class="Conteiner-Form" required placeholder="CONFIRME A SUA SENHA"><br>
+        </div>
+      <button type="submit" name="enviar-cadastro">ENVIAR</button>
+      <button type="reset" name="limpar-cadastro">LIMPAR</button>
+    </div>
+  </form>
+</body>
+</html>

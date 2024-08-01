@@ -1,0 +1,42 @@
+.Conteiner-Localizacoes{
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 10px;
+    float:right;
+    box-shadow: 3px 3px 9px rgb(195, 195, 195);
+    margin-bottom: 30px;
+}
+
+.Conteiner-Localizacoes p{
+  text-align: center;
+}
+
+.imagens-localizacoes{
+    width: 20%;
+    border-radius: 20px;
+    float:left;
+    margin-right: 20px;
+    margin-left: 15px;
+    
+}
+
+.mapa-localizacao{
+    border-radius: 20px;
+    width: 70%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagens-localizacoes2{
+    width: 20%;
+    border-radius: 20px;
+    float:left;
+    margin-right: 20px;
+    margin-left: 15px;
+       
+}

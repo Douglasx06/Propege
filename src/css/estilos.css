@@ -1,0 +1,183 @@
+@import url(banner.css);
+@import url(header.css);
+@import url(Localizacoes.css);
+@import url(quem-somos.css);
+
+*{
+    margin-top: 3px;
+    margin-right:5px;
+    margin-left: 5px;
+}
+
+body{
+    font-family: Roboto;
+}
+
+h1{
+    color: #0339A6;
+    font-family: Roboto;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+h2{
+    color: #04B2D9;
+    font-size: 1.4em;
+}
+
+p{
+    font-family: Roboto;
+    font-size: 1.1em;
+    text-align: left;  
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+    margin-left:-40px;
+    margin-top: -50px;   
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+
+}
+
+#voltar-topo{
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#icon-email{
+    width: 3%;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Conteiner-Form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;  
+}
+
+button{
+  padding: 20px 20px;
+  
+}
+
+.topo{
+  margin-bottom: 30px;
+  margin-right: auto;  
+}
+
+/*FONTE SANS*/
+
+
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+/*FONTE ROBOTO*/
+
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }

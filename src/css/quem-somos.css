@@ -1,0 +1,27 @@
+#texto-direitos-licencas{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 9px rgb(195, 195, 195);
+
+}
+
+#texto-quem-somos{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.473);
+    box-shadow: 3px 3px 9px rgb(195, 195, 195);
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
