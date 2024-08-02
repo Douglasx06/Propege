@@ -1,12 +1,10 @@
-@import url(estilos.css);
-
 body{
     font-family: sans-serif;
 }
 
 h1{
     text-align: center;
-    margin-left: 340px;
+    color: #0339A6;
 }
 
 p{

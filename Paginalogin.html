@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Propege</title>
+    <!-- ESTILO -->
+    <link rel="stylesheet" href="src/css/StylePortal.css">
+    <!-- FAVICON -->
+    <link rel="icon" href="src/img/icon.png">
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- ESTILOS EMBUTIDOS -->
+    <style>
+        @media (max-width: 600px) {
+            header {
+                padding: 10px;
+            }
+
+            #topo {
+                flex-direction: column;
+            }
+
+            a.topo {
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .button {
+                width: 100%;
+                font-size: 17px;
+            }
+        }
+
+        .form-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea {
+            padding: 10px;
+            font-size: 16px;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-container textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+
+        #assuntos {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .assunto-item {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: left;
+            position: relative;
+        }
+
+        .assunto-item button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .assunto-item button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="topo"> 
+            <a href="Cadastro.html" class="topo">Cadastrar</a>
+            <a href="Excluir.html" class="topo">Excluir</a> 
+        </div>
+    </header>
+
+    <h1>Portal Propege</h1>
+
+    <button class="button" onclick="toggleForm()">+Adicionar</button>
+
+    <div class="form-container" id="form-container">
+        <form id="assunto-form" method="POST" action="src/php/inserirassunto.php">
+            <input type="text" name="assunto" id="assunto-input" placeholder="Digite o assunto">
+            <textarea name="detalhes" id="detalhes-input" placeholder="Digite os detalhes do assunto"></textarea>
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <div id="assuntos">
+        <p>Assuntos:</p>
+        <!-- Assuntos serão carregados aqui pelo PHP -->
+    </div>
+
+    <script>
+        function toggleForm() {
+            var formContainer = document.getElementById('form-container');
+            if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+                formContainer.style.display = 'block';
+            } else {
+                formContainer.style.display = 'none';
+            }
+        }
+
+        function loadAssuntos() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'src/php/BuscarEventos.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('assuntos').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        function removeAssunto(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'src/php/ExcluirEvento.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    loadAssuntos(); // Recarrega os assuntos após exclusão
+                }
+            };
+            xhr.send('id=' + id);
+        }
+
+        // Carrega os assuntos ao carregar a página
+        window.onload = loadAssuntos;
+    </script>
+</body>
+</html>

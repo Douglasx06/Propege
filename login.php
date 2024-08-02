@@ -1,5 +1,5 @@
 <?php
-require "conexao.php";
+require "src/php/conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_POST['inputEmail'];
